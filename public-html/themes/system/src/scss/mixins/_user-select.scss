@@ -1,0 +1,4 @@
+// ユーザーの選択
+@mixin user-select($select) {
+  user-select: $select;
+}

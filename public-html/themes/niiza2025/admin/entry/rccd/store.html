@@ -1,0 +1,240 @@
+<table class="acms-admin-table-admin-edit">
+  <tr>
+    <th>共通番号 <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="store_number" value="{store_number}" class="acms-admin-form-width-full" />
+      <input type="hidden" name="field[]" value="store_number" />
+    </td>
+  </tr>
+  <tr>
+    <th>au PAY <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <div class="acms-form-group acms-radio-btn">
+        <input type="radio" name="store_aupay" value="〇" {store_aupay:checked#〇} id="input-radio-store_aupay-〇" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_aupay-〇">〇</label>
+        <input type="radio" name="store_aupay" value="×" {store_aupay:checked#×} id="input-radio-store_aupay-×" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_aupay-×"style="width: 1em; text-align: center;">×</label>
+      </div>
+      <input type="hidden" name="field[]" value="store_aupay" />
+      <input type="hidden" name="store_aupay:v#required" />
+      <!-- BEGIN store_aupay:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>au PAYの可否が選択されていません。</p>
+      </div>
+      <!-- END store_aupay:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>d払い <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <div class="acms-form-group acms-radio-btn">
+        <input type="radio" name="store_dbarai" value="〇" {store_dbarai:checked#〇} id="input-radio-store_dbarai-〇" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_dbarai-〇">〇</label>
+        <input type="radio" name="store_dbarai" value="×" {store_dbarai:checked#×} id="input-radio-store_dbarai-×" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_dbarai-×"style="width: 1em; text-align: center;">×</label>
+      </div>
+      <input type="hidden" name="field[]" value="store_dbarai" />
+      <input type="hidden" name="store_dbarai:v#required" />
+      <!-- BEGIN store_dbarai:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>d払いの可否が選択されていません。</p>
+      </div>
+      <!-- END store_dbarai:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>PayPay <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <div class="acms-form-group acms-radio-btn">
+        <input type="radio" name="store_paypay" value="〇" {store_paypay:checked#〇} id="input-radio-store_paypay-〇" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_paypay-〇">〇</label>
+        <input type="radio" name="store_paypay" value="×" {store_paypay:checked#×} id="input-radio-store_paypay-×" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_paypay-×"style="width: 1em; text-align: center;">×</label>
+      </div>
+      <input type="hidden" name="field[]" value="store_paypay" />
+      <input type="hidden" name="store_paypay:v#required" />
+      <!-- BEGIN store_paypay:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>PayPayの可否が選択されていません。</p>
+      </div>
+      <!-- END store_paypay:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>楽天ペイ <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <div class="acms-form-group acms-radio-btn">
+        <input type="radio" name="store_rakutenpay" value="〇" {store_rakutenpay:checked#〇} id="input-radio-store_rakutenpay-〇" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_rakutenpay-〇">〇</label>
+        <input type="radio" name="store_rakutenpay" value="×" {store_rakutenpay:checked#×} id="input-radio-store_rakutenpay-×" class="acms-admin-btn-radio" />
+        <label for="input-radio-store_rakutenpay-×"style="width: 1em; text-align: center;">×</label>
+      </div>
+      <input type="hidden" name="field[]" value="store_rakutenpay" />
+      <input type="hidden" name="store_rakutenpay:v#required" />
+      <!-- BEGIN store_rakutenpay:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>楽天ペイの可否が選択されていません。</p>
+      </div>
+      <!-- END store_rakutenpay:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>LP掲載カテゴリー <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <!-- BEGIN_MODULE Module_Field id="master_storeCategory" -->
+      <select name="store_category" class="acms-admin-form-width-mini">
+        <option value=""></option>
+        <!-- BEGIN master_storeCategory:loop -->
+        <option value="{master_storeCategory_label}" <!-- BEGIN\ store_category:loop --><!-- BEGIN_IF [\{store_category\}/eq/{master_storeCategory_label}] -->selected<!-- END_IF --><!-- END\ store_category:loop -->>{master_storeCategory_label}</option>
+        <!-- END master_storeCategory:loop -->
+      </select>
+      <!-- END_MODULE Module_Field -->
+      <!-- END master_storeCategory:loop -->
+      <!-- END_MODULE Module_Field -->
+      <a href="/bid/1/admin/module_edit/?mid=2#acms_box3" class="acms-admin-btn">カテゴリーの編集</a>
+      <input type="hidden" name="field[]" value="store_category" />
+      <input type="hidden" name="store_category:v#required" />
+      <!-- BEGIN store_category:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>カテゴリーが選択されていません。</p>
+      </div>
+      <!-- END store_category:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>加盟店名 <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <input type="text" name="store_member" value="{store_member}" class="acms-admin-form-width-full" />
+      <input type="hidden" name="field[]" value="store_member" />
+      <input type="hidden" name="store_member:v#required" />
+      <!-- BEGIN store_member:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>加盟店名が入力されていません。</p>
+      </div>
+      <!-- END store_member:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>店舗名 <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <input type="text" name="title" value="{title}" class="acms-admin-form-width-full" id="title" />
+      <input type="hidden" name="field[]" value="title" />
+      <input type="hidden" name="title:v#required" />
+      <!-- BEGIN title:validator -->
+      <div class="validator-result-0">
+      <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>店舗名が入力されていません。</p>
+      </div>
+      <!-- END title:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>店舗名（ヨミ） <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="title_kana" value="{title_kana}" class="acms-admin-form-width-full" id="title_kana" />
+      <input type="hidden" name="field[]" value="title_kana" />
+    </td>
+  </tr>
+  <tr>
+    <th>店舗名（よみ） <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="title_hira" value="{title_hira}" class="acms-admin-form-width-full" id="title_hira" />
+      <input type="hidden" name="field[]" value="title_hira" />
+    </td>
+  </tr>
+  <tr>
+    <th>郵便番号 <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="store_postcode" value="{store_postcode}" class="acms-admin-form-width-mini" size="8" maxlength="8" />
+      <input type="hidden" name="field[]" value="store_postcode" />
+      <a href="javascript:void(0);" class="acms-admin-btn ajaxzip3" id="zip-btn">住所検索</a>
+    </td>
+  </tr>
+  <tr>
+    <th>住所 <span class="acms-admin-label acms-admin-label-danger">必須</span></th>
+    <td>
+      <input type="text" name="store_address" value="{store_address}" class="acms-admin-form-width-full p-region p-locality p-street-address p-extended-address" />
+      <input type="hidden" name="pref">
+      <input type="hidden" name="city">
+      <input type="hidden" name="field[]" value="store_address" />
+      <input type="hidden" name="store_address:v#required" />
+      <!-- BEGIN store_address:validator -->
+      <div class="validator-result-0">
+        <p class="error-text"><span class="acms-admin-icon acms-admin-icon-attention" aria-hidden="true"></span>住所が入力されていません。</p>
+      </div>
+      <!-- END store_address:validator -->
+    </td>
+  </tr>
+  <tr>
+    <th>住所（エリア分け） <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="store_area" value="{store_area}" class="acms-admin-form-width-full" id="store_area" />
+      <input type="hidden" name="field[]" value="store_area" />
+    </td>
+  </tr>
+  <tr>
+    <th>住所（ヨミ） <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="area_kana" value="{area_kana}" class="acms-admin-form-width-full" id="area_kana" />
+      <input type="hidden" name="field[]" value="area_kana" />
+    </td>
+  </tr>
+  <tr>
+    <th>住所（よみ） <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="area_hira" value="{area_hira}" class="acms-admin-form-width-full" id="area_hira" />
+      <input type="hidden" name="field[]" value="area_hira" />
+    </td>
+  </tr>
+  <tr>
+    <th>電話番号 <span class="acms-admin-label">任意</span></th>
+    <td>
+      <input type="text" name="store_tel" value="{store_tel}" class="acms-admin-form-width-full" />
+      <input type="hidden" name="field[]" value="store_tel" />
+    </td>
+  </tr>
+</table>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<script src="%{ROOT_DIR}shared/js/autokana.js" charset="UTF-8"></script>
+<script>
+ACMS.Ready(function() {
+  let hide_contents = new Array();
+  hide_contents.push('#entry-title-display');
+  hide_contents.push('#entry-category-display');
+  hide_contents.push('#entry-tag-display');
+  hide_contents.push('#entry-date-display');
+  hide_contents.push('#entry-file-name-display');
+  hide_contents.push('#entry-summary-range-display');
+  hide_contents.push('#entry-indexing-display');
+  hide_contents.push('#entry-link-url-display');
+  hide_contents.push('.ui-sortable');
+  hide_contents.push('.acms-admin-form-group');
+  hide_contents.push('.acms-admin-box-medium');
+  setTimeout(function(){
+    $(hide_contents.join(',')).hide();
+  },500);
+
+  AutoKana.bind("#title", "#title_kana", {
+    katakana: true
+  });
+  AutoKana.bind("#title", "#title_hira");
+  AutoKana.bind("#store_area", "#area_kana", {
+    katakana: true
+  });
+  AutoKana.bind("#store_area", "#area_hira");
+});
+
+$('#zip-btn').on('click', function() {
+  AjaxZip3.zip2addr('store_postcode','','pref','city');
+  //成功時に実行する処理
+  AjaxZip3.onSuccess = function() {
+    setTimeout(function() {
+      $('[name="store_address"]').val($('[name="pref"]').val() + $('[name="city"]').val()).focus();
+    },10);
+  };
+  //失敗時に実行する処理
+  AjaxZip3.onFailure = function() {
+    alert('郵便番号に該当する住所が見つかりません');
+  };
+  return false;
+});
+</script>

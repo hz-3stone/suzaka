@@ -1,0 +1,36 @@
+## CMS
+config.server.php
+license.php
+/.htaccess
+/.htpasswd
+/archives/*
+!/archives/.htaccess
+/media/*
+!/media/.htaccess
+/storage/*
+!/storage/.htaccess
+/cache/*
+!/cache/.htaccess
+/private/backup*
+/_setup*
+/setup*
+# /themes/*/dest/*
+
+## Editor
+.idea
+.vscode
+
+## MacOS
+.DS_Store
+
+## Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## Etc
+.env
+node_modules
+php.ini
