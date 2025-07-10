@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@use "settings/_index" as *; // 設定
+
+/**************************************************/
+/* helpers */
+/**************************************************/
+
+._disp-ib {
+  display: inline-block !important;
+}
+
+// 表示切替
+
+// cW 
+@media (max-width: $breakPoint-cw) { // 以上で表示
+  ._view-cw-high { display: none !important; }
+}
+@media (min-width: $breakPoint-cw + 1) { // 未満で表示
+  ._view-cw-low { display: none !important; }
+}
+
+// xl
+@media (max-width: $breakPoint-xl) { // 以上で表示
+  ._view-xl-high { display: none !important; }
+}
+@media (min-width: $breakPoint-xl + 1) { // 未満で表示
+  ._view-xl-low { display: none !important; }
+}
+
+// lg
+@media (max-width: $breakPoint-lg) { // 以上で表示
+  ._view-lg-high { display: none !important; }
+}
+@media (min-width: $breakPoint-lg + 1) { // 未満で表示
+  ._view-lg-low { display: none !important; }
+}
+
+// md
+@media (max-width: $breakPoint-md) { // 以上で表示
+  ._view-md-high { display: none !important; }
+}
+@media (min-width: $breakPoint-md + 1) { // 未満で表示
+  ._view-md-low { display: none !important; }
+}
+
+// sm
+@media (max-width: $breakPoint-sm) { // 以上で表示
+  ._view-sm-high { display: none !important; }
+}
+@media (min-width: $breakPoint-sm + 1) { // 未満で表示
+  ._view-sm-low { display: none !important; }
+}
+
+// 表示切替：PC
+// @media (max-width: $breakPoint-cw) {
+//   ._disp-pc { display: none !important; }
+// }
+// @media (min-width: $breakPoint-cw + 1) {
+//   ._hide-pc { display: none !important; }
+// }
+
+// 表示切替：タブレット
+// @media (min-width: $breakPoint-cw + 1) {
+//   ._disp-tb { display: none !important; }
+// }
+// @media (min-width: $breakPoint-sm + 1) and (max-width: $breakPoint-cw) {
+//   ._hide-tb { display: none !important; }
+// }
+// @media (max-width: $breakPoint-sm) {
+//   ._disp-tb { display: none !important; }
+// }
+
+// 表示切替：スマホ
+// @media (min-width: $breakPoint-sm + 1) {
+//   ._disp-sp { display: none !important; }
+// }
+// @media (max-width: $breakPoint-sm) {
+//   ._hide-sp { display: none !important; }
+// }
+
+
+//clearfix
+._clearfix { @include clearfix; }
+
+//text-align
+._center { text-align: center !important; }
+._left { text-align: left !important; }
+._right { text-align: right !important; }
+
+//float
+._float-l { float: left !important; }
+._float-r { float: right !important; }
+._clear { clear: both !important; }
+
+//display
+._hidden { display: none !important; }
+._disp-ib { display: inline-block !important; }
+
+//margin
+._margin0 { margin: 0 !important; }
+
+//padding
+._padding0 { padding: 0 !important; }
+
+//border
+._border0 { border: none !important; }
+
+//position
+._fixed { position: fixed !important; }
+._absolute { position: absolute !important; }
+._static { position: static !important; }
+
+//font-size
+._xsmall { font-size: 75% !important; }
+._small { font-size: 88% !important; }
+._large { font-size: 113% !important; }
+._xlarge { font-size: 133% !important; }
+
+//white-space
+._nowrap { white-space: nowrap !important; }
+
+//nobg
+._nobg { background: none !important; }
+
+//width
+._full { width: 100% !important; }
