@@ -7,144 +7,146 @@
 /**************************************************/
 
 //==================================================
-// card
+// visual
 //==================================================
-// .c-card-heading {
-//   margin: 40px 0 0 0;
-//   border-radius: 8px;
-//   text-align: center;
-//   color: white;
-//   font-weight: bold;
-//   @include fontSize(22);
-//   padding: 10px;
-//   background: #FF701A;
-//   &.-business {
-//     background: #22AC38;
-//     margin-top: 30px;
-//   }
-//   &.-businesstrip {
-//     background: #E71F18;
-//     margin-top: 32px;
-//   }
-//   @media (max-width: $breakPoint-md) {
-//     margin-top: 30px;
-//     @include fontSize(18);
-//     padding: 8px;
-//     &.-business {
-//       margin-top: 30px;
-//     }
-//   }
-// }
-// .c-card-columns  {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: 42px;
-//   gap: 40px;
-//   @media (max-width: $breakPoint-md) {
-//     margin-top: 24px;
-//     gap: 30px;
-//     flex-direction: column;
-//   }
-//   .card{
-//     width: calc(50% - 20px);
-//     box-sizing: border-box;
-//     @media (max-width: $breakPoint-md) {
-//       width: 100%;
-//     }
-//   }
-//   .card.-finish {
-//     .img {
-//       position: relative;
-//       border-radius: rem(7);
-//       overflow: hidden;
-//       &::before {
-//         content: "終了しました";
-//         color: white;
-//         @include fontSize(22);
-//         font-weight: bold;
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         width: 100%;
-//         height: 100%;
-//         background: rgba(0,0,0,0.7);
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         z-index: 2;
-//       }
-//     }
-//   }
-//   .textarea{
-//     margin-top: 24px;
-//     @media (max-width: $breakPoint-md) {
-//       margin-top: 16px;
-//     }
-//     .date,.location{
-//       display: flex;
-//       flex-wrap: wrap;
-//       align-items: flex-start;
-//       margin: 0;
-//       gap: 10px;
-//       @media (max-width: $breakPoint-md) {
-//         display: block;
-//       }
-//       span{ font-weight: 600; }
-//       .label{
-//         display: block;
-//         width: min(70px, 100%);
-//         font-weight: bold;
-//         text-align: center;
-//         background-color: $black;
-//         color: $white;
-//         border-radius: 100px;
-//         box-sizing: border-box;
-//         padding: 3px;
-//         line-height: 1.5;
-//         @media (max-width: $breakPoint-md) {
-//           @include fontSize(14);
-//           width: min(60px, 100%);
-//           padding: 2px;
-//         }
-//       }
-//       .txt{
-//         flex: 1;
-//         line-height: 1.9;
-//         margin: 0;
-//         font-weight: bold;
-//         @media (max-width: $breakPoint-md) {
-//           display: block;
-//           width: 100%;
-//           margin-top: .4em;
-//           @include fontSize(14);
-//         }
-//       }
-//     }
-//     .location{
-//       margin-top: 16px;
-//       @media (max-width: $breakPoint-md) {
-//         margin-top: 10px;
-//       }
-//     }
-//   }
-//   .indent {
-//     margin: 20px 0 0 0;
-//     padding: 0;
-//     list-style: none;
-//     font-weight: 500;
-//     line-height: calc(26 / 16);
-//     >li {
-//       color: #E62119;
-//       padding-left: 1em;
-//       text-indent: -1em;
-//     }
-//     @media (max-width: $breakPoint-md) {
-//       margin-top: 16px;
-//       @include fontSize(14);
-//     }
-//   }
-// }
+.c-card-heading {
+  margin: 40px 0 0 0;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  @include subFontFamily;
+  @include fontSize(22);
+  padding: 10px;
+  background: #FF701A;
+  &.-business {
+    background: #22AC38;
+    margin-top: 30px;
+  }
+  &.-businesstrip {
+    background: #E71F18;
+    margin-top: 32px;
+  }
+  @media (max-width: $breakPoint-md) {
+    margin-top: 30px;
+    @include fontSize(18);
+    padding: 8px;
+    &.-business {
+      margin-top: 30px;
+    }
+  }
+}
+.c-card-columns  {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 42px;
+  gap: 40px;
+  @media (max-width: $breakPoint-md) {
+    margin-top: 24px;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .card{
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    @media (max-width: $breakPoint-md) {
+      width: 100%;
+    }
+  }
+  .card.-finish {
+    .img {
+      position: relative;
+      border-radius: rem(7);
+      overflow: hidden;
+      &::before {
+        content: "終了しました";
+        @include subFontFamily;
+        color: white;
+        @include fontSize(22);
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+    }
+  }
+  .textarea{
+    margin-top: 24px;
+    @media (max-width: $breakPoint-md) {
+      margin-top: 16px;
+    }
+    .date,.location{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin: 0;
+      gap: 10px;
+      @media (max-width: $breakPoint-md) {
+        display: block;
+      }
+      span{ font-weight: 600; }
+      .label{
+        display: block;
+        width: min(70px, 100%);
+        font-weight: bold;
+        text-align: center;
+        background-color: $black;
+        color: $white;
+        border-radius: 100px;
+        box-sizing: border-box;
+        padding: 3px;
+        line-height: 1.5;
+        @media (max-width: $breakPoint-md) {
+          @include fontSize(14);
+          width: min(60px, 100%);
+          padding: 2px;
+        }
+      }
+      .txt{
+        flex: 1;
+        line-height: 1.9;
+        margin: 0;
+        font-weight: bold;
+        @media (max-width: $breakPoint-md) {
+          display: block;
+          width: 100%;
+          margin-top: .4em;
+          @include fontSize(14);
+        }
+      }
+    }
+    .location{
+      margin-top: 16px;
+      @media (max-width: $breakPoint-md) {
+        margin-top: 10px;
+      }
+    }
+  }
+  .indent {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+    >li {
+      color: #E62119;
+      padding-left: 1em;
+      text-indent: -1em;
+    }
+    @media (max-width: $breakPoint-md) {
+      margin-top: 16px;
+      @include fontSize(14);
+    }
+  }
+}
 
 //==================================================
 // Text
@@ -159,29 +161,42 @@
   }
 }
 
-.c-marker {
-  background: linear-gradient(transparent 0, transparent 70%, #FEE05D 60%, #FEE05D 100%);
-  font-weight: 700;
+.c-text-b{
+  @include fontSize(16);
+  margin: 16px 0 0;
+  line-height: 1.7;
+  &.-center{ text-align: center; }
+  &.-right{ text-align: right; }
+  &.-str{ font-weight: bold; }
+  &.-red{ color: $red; }
+  &.-fsml{ @include fontSize(14); }
+  &.-fmdl{ @include fontSize(15); }
+  @media screen and (max-width: $breakPoint-md) {
+    @include fontSize(14);
+    &.-fmdl{ @include fontSize(13); }
+  }
 }
+
 //==================================================
 // Heading
 //==================================================
 .c-heading-a {
-  margin: 30px 0 0 0;
+  @include subFontFamily;
+  margin: 40px 0 0 0;
   padding-bottom: 12px;
-  padding-left: 1.4em;
-  @include fontSize(19);
-  color: #E8380D;
+  padding-left: 1.7em;
+  @include fontSize(24);
+  color: $mainColor;
   position: relative;
-  border-bottom: solid 2px #E8380D;
+  border-bottom: solid 2px $mainColor;
   line-height: 1.5;
   &::before {
     content: "";
     position: absolute;
-    top: .3em;
+    top: 2px;
     left: 0;
-    width: 1em;
-    height: 1.1em;
+    width: 1.4em;
+    height: 1.4em;
     margin: auto;
     background: url(../img/icon-heading-a.png) no-repeat center/contain;
   }
@@ -189,7 +204,7 @@
     margin-top: 0;
   }
   @media (max-width: $breakPoint-md) {
-    @include fontSize(16);
+    @include fontSize(18);
   }
 }
 .c-heading-b {
@@ -237,6 +252,7 @@
   @include fontSize(18);
   color: $white;
   margin: 0;
+  @include subFontFamily;
   @media (max-width: $breakPoint-md) {
     @include fontSize(16);
   }
@@ -265,6 +281,7 @@
   }
   >.txt {
     position: relative;
+    @include subFontFamily;
     font-weight: bold;
     display: inline-flex;
     align-items: center;
@@ -305,6 +322,7 @@
   width: fit-content;
   margin: 0 auto;
   >.txt {
+    @include subFontFamily;
     @include fontSize(18);
     display: inline;
     background: linear-gradient(transparent 60%, $yellow 60%);

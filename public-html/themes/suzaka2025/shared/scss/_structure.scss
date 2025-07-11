@@ -13,7 +13,6 @@
 // コンテンツ
 .l-page-container {
   position: relative; overflow: hidden; z-index: 1;
-  background: url(../../images/bg-main.png) repeat center / 100px;
 }
 
 //コンテンツエリア
@@ -37,14 +36,14 @@
 .l-footer{
   box-sizing: border-box;
   background-color: $white;
-  padding: 16px;
+  padding: 11px 0 7px;
   @media screen and (max-width: $breakPoint-md) {
-    // padding: 8px 0;
+    padding: 8px 0;
   }
   .logo{
     display: block;
     max-width: 100%;
-    width: 149px;
+    width: 166px;
     margin: 0 auto;
     @media screen and (max-width: $breakPoint-md) {
       width: 100px;
@@ -136,7 +135,7 @@
   margin: 0 auto; padding: 0 20px; list-style: none;
   >li {
     a {
-      display: block; padding: 20px 0; color: #281284; text-decoration: none; width: fit-content; font-weight: bold;
+      display: block; padding: 20px 0; color: #281284; text-decoration: none; width: fit-content; @include subFontFamily; font-weight: bold;
       &.-current, &:hover {
         background: linear-gradient(0, transparent 0, transparent 35%, #FFFF01 35%, #FFFF01 45%, transparent 45%, transparent 100%); opacity: 1;
       }
@@ -150,19 +149,37 @@
 .l-main-visual {
   >.image >img { width: 100%; }
   position: relative;
-  // .lead {
-  //   z-index: 3;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   color: #fff;
-  //   font-weight: bold;
-  //   @include fontSize(40);
-  //   text-align: center;
-  //   line-height: 1.5;
-  //   padding: 0 10px;
+  // &::before {
   //   width: 100%;
-  //   box-sizing: border-box;
+  //   height: calc(100% + $headerHeight);
+  //   background-color: rgba(#000, 0.5);
+  //   top: 0;
+  //   left: 0;
+  //   content: "";
+  //   position: absolute;
+  //   z-index: 2;
   // }
+  .lead {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    @include fontSize(40);
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: $breakPoint-lg) {
+    &::before {
+      height: 100%;
+    }
+    .lead {
+      @include fontSize(17);
+    }
+  }
 }

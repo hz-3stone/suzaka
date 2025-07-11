@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="5" viewBox="0 0 22 5">
+  <defs>
+    <clipPath id="clip-decoration-pinkcircle">
+      <rect width="22" height="5"/>
+    </clipPath>
+  </defs>
+  <g id="decoration-pinkcircle" clip-path="url(#clip-decoration-pinkcircle)">
+    <g id="グループ_37862" data-name="グループ 37862" transform="translate(-223 -2943)">
+      <circle id="楕円形_426" data-name="楕円形 426" cx="2.5" cy="2.5" r="2.5" transform="translate(223 2943)" fill="#e81a74"/>
+      <circle id="楕円形_427" data-name="楕円形 427" cx="1.5" cy="1.5" r="1.5" transform="translate(235 2944)" fill="#e81a74"/>
+    </g>
+  </g>
+</svg>

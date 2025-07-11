@@ -54,7 +54,7 @@
 // "pkna": プロポーショナルかな
 
 @mixin baseFontFamily($_font:"") {
-  // font-feature-settings : "palt";
+  font-feature-settings : "palt";
   @if $_font {
     font-family: $_font, global.$baseFonts;
   } @else {
@@ -63,7 +63,7 @@
 }
 
 @mixin subFontFamily($_font:"") {
-  // font-feature-settings : "palt";
+  font-feature-settings : "palt";
   @if $_font {
     font-family: $_font, global.$subFonts;
   } @else {

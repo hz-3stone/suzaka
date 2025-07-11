@@ -10,6 +10,7 @@
  *   .f-**** : フォーム系コンポーネント
  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -575,13 +576,16 @@ html {
 }
 
 body {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
   font-family: "", "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴ Pro", "Hiragino Sans", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
   min-width: 375px;
   padding: 0px;
   color: #000;
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-weight: 500;
 }
 body.-fixed {
   position: fixed;
@@ -598,6 +602,8 @@ input,
 textarea,
 select,
 button {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
   font-family: "", "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴ Pro", "Hiragino Sans", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
 }
 
@@ -656,7 +662,6 @@ body._ios a:hover {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: url(../../images/bg-main.png) repeat center/100px;
 }
 
 .l-page-contents {
@@ -680,13 +685,19 @@ body._ios a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
-  padding: 16px;
+  padding: 11px 0 7px;
+}
+@media screen and (max-width: 767px) {
+  .l-header,
+  .l-footer {
+    padding: 8px 0;
+  }
 }
 .l-header .logo,
 .l-footer .logo {
   display: block;
   max-width: 100%;
-  width: 149px;
+  width: 166px;
   margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
@@ -858,6 +869,9 @@ body._ios a:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
 }
 .c-spnav-list > li a.-current, .c-spnav-list > li a:hover {
@@ -872,6 +886,31 @@ body._ios a:hover {
 .l-main-visual > .image > img {
   width: 100%;
 }
+.l-main-visual .lead {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1039px) {
+  .l-main-visual::before {
+    height: 100%;
+  }
+  .l-main-visual .lead {
+    font-size: 1.0625rem;
+  }
+}
 
 /**************************************************/
 /* components */
@@ -879,6 +918,190 @@ body._ios a:hover {
 /**************************************************/
 /* components - basic */
 /**************************************************/
+.c-card-heading {
+  margin: 40px 0 0 0;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
+  font-size: 1.375rem;
+  padding: 10px;
+  background: #FF701A;
+}
+.c-card-heading.-business {
+  background: #22AC38;
+  margin-top: 30px;
+}
+.c-card-heading.-businesstrip {
+  background: #E71F18;
+  margin-top: 32px;
+}
+@media (max-width: 767px) {
+  .c-card-heading {
+    margin-top: 30px;
+    font-size: 1.125rem;
+    padding: 8px;
+  }
+  .c-card-heading.-business {
+    margin-top: 30px;
+  }
+}
+
+.c-card-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 42px;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .c-card-columns {
+    margin-top: 24px;
+    gap: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.c-card-columns .card {
+  width: calc(50% - 20px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .c-card-columns .card {
+    width: 100%;
+  }
+}
+.c-card-columns .card.-finish .img {
+  position: relative;
+  border-radius: 0.4375rem;
+  overflow: hidden;
+}
+.c-card-columns .card.-finish .img::before {
+  content: "終了しました";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
+  color: white;
+  font-size: 1.375rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+.c-card-columns .textarea {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .c-card-columns .textarea {
+    margin-top: 16px;
+  }
+}
+.c-card-columns .textarea .date, .c-card-columns .textarea .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .c-card-columns .textarea .date, .c-card-columns .textarea .location {
+    display: block;
+  }
+}
+.c-card-columns .textarea .date span, .c-card-columns .textarea .location span {
+  font-weight: 600;
+}
+.c-card-columns .textarea .date .label, .c-card-columns .textarea .location .label {
+  display: block;
+  width: min(70px, 100%);
+  font-weight: bold;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3px;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .c-card-columns .textarea .date .label, .c-card-columns .textarea .location .label {
+    font-size: 0.875rem;
+    width: min(60px, 100%);
+    padding: 2px;
+  }
+}
+.c-card-columns .textarea .date .txt, .c-card-columns .textarea .location .txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 1.9;
+  margin: 0;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .c-card-columns .textarea .date .txt, .c-card-columns .textarea .location .txt {
+    display: block;
+    width: 100%;
+    margin-top: 0.4em;
+    font-size: 0.875rem;
+  }
+}
+.c-card-columns .textarea .location {
+  margin-top: 16px;
+}
+@media (max-width: 767px) {
+  .c-card-columns .textarea .location {
+    margin-top: 10px;
+  }
+}
+.c-card-columns .indent {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+  line-height: 1.625;
+}
+.c-card-columns .indent > li {
+  color: #E62119;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+@media (max-width: 767px) {
+  .c-card-columns .indent {
+    margin-top: 16px;
+    font-size: 0.875rem;
+  }
+}
+
 .c-text-a {
   font-size: 1rem;
   margin: 0;
@@ -891,29 +1114,58 @@ body._ios a:hover {
   }
 }
 
-.c-marker {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(70%, transparent), color-stop(60%, #FEE05D), to(#FEE05D));
-  background: linear-gradient(transparent 0, transparent 70%, #FEE05D 60%, #FEE05D 100%);
-  font-weight: 700;
+.c-text-b {
+  font-size: 1rem;
+  margin: 16px 0 0;
+  line-height: 1.7;
+}
+.c-text-b.-center {
+  text-align: center;
+}
+.c-text-b.-right {
+  text-align: right;
+}
+.c-text-b.-str {
+  font-weight: bold;
+}
+.c-text-b.-red {
+  color: #DE0010;
+}
+.c-text-b.-fsml {
+  font-size: 0.875rem;
+}
+.c-text-b.-fmdl {
+  font-size: 0.9375rem;
+}
+@media screen and (max-width: 767px) {
+  .c-text-b {
+    font-size: 0.875rem;
+  }
+  .c-text-b.-fmdl {
+    font-size: 0.8125rem;
+  }
 }
 
 .c-heading-a {
-  margin: 30px 0 0 0;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
+  margin: 40px 0 0 0;
   padding-bottom: 12px;
-  padding-left: 1.4em;
-  font-size: 1.1875rem;
-  color: #E8380D;
+  padding-left: 1.7em;
+  font-size: 1.5rem;
+  color: #2B9B4B;
   position: relative;
-  border-bottom: solid 2px #E8380D;
+  border-bottom: solid 2px #2B9B4B;
   line-height: 1.5;
 }
 .c-heading-a::before {
   content: "";
   position: absolute;
-  top: 0.3em;
+  top: 2px;
   left: 0;
-  width: 1em;
-  height: 1.1em;
+  width: 1.4em;
+  height: 1.4em;
   margin: auto;
   background: url(../img/icon-heading-a.png) no-repeat center/contain;
 }
@@ -922,14 +1174,14 @@ body._ios a:hover {
 }
 @media (max-width: 767px) {
   .c-heading-a {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .c-heading-b {
   position: relative;
   font-size: 1.1875rem;
-  color: #13AE67;
+  color: #2B9B4B;
   margin: 0;
   padding-left: 31px;
   padding-bottom: 17px;
@@ -944,7 +1196,7 @@ body._ios a:hover {
 .c-heading-b::before {
   position: absolute;
   content: "";
-  background: #13AE67;
+  background: #2B9B4B;
   -webkit-mask-image: url(../img/icon-expmark.svg);
           mask-image: url(../img/icon-expmark.svg);
   -webkit-mask-size: contain;
@@ -966,7 +1218,7 @@ body._ios a:hover {
 .c-heading-b::after {
   position: absolute;
   content: "";
-  background: #13AE67;
+  background: #2B9B4B;
   -webkit-mask-image: url(../img/decoration-pinkcircle.svg);
           mask-image: url(../img/decoration-pinkcircle.svg);
   width: 100%;
@@ -979,6 +1231,9 @@ body._ios a:hover {
   font-size: 1.125rem;
   color: #fff;
   margin: 0;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
 }
 @media (max-width: 767px) {
   .c-heading-c {
@@ -1026,6 +1281,9 @@ body._ios a:hover {
 }
 .c-heading-d > .txt {
   position: relative;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1078,6 +1336,9 @@ body._ios a:hover {
   margin: 0 auto;
 }
 .c-heading-e > .txt {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-size: 1.125rem;
   display: inline;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #FFEA00));
@@ -1170,28 +1431,31 @@ body._ios a:hover {
 }
 
 .l-campaign {
-  padding: 120px 0 0;
+  padding: 80px 0 100px;
+  background: url(../img/bg-main.png) repeat center/100px;
 }
 @media screen and (max-width: 767px) {
   .l-campaign {
-    padding: 60px 0 0;
+    padding: 50px 0 50px;
   }
 }
 
 .detail-block .detailbox {
   position: relative;
-  border-radius: 4px;
+  border-radius: 20px;
   background: #fff;
-  border: 2px solid #13AE67;
-  padding: 48px 38px 32px;
+  border: 4px solid #2B9B4B;
+  -webkit-box-shadow: 5px 5px 0 #2B9B4B;
+          box-shadow: 5px 5px 0 #2B9B4B;
+  padding: 60px 50px 40px;
 }
 @media screen and (max-width: 767px) {
   .detail-block .detailbox {
-    padding: 30px 20px 20px;
+    padding: 36px 20px 20px;
   }
 }
 .detail-block .detailbox:not(:first-of-type) {
-  margin-top: 90px;
+  margin-top: 70px;
 }
 @media screen and (max-width: 767px) {
   .detail-block .detailbox:not(:first-of-type) {
@@ -1202,7 +1466,10 @@ body._ios a:hover {
   border-radius: var(--nested-radius);
 }
 .detail-block .detailbox > .text {
-  font-size: 1.3125rem;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
+  font-size: 1.375rem;
   font-weight: bold;
   line-height: 1.7;
   margin: 0;
@@ -1217,23 +1484,22 @@ body._ios a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: -27px;
-  left: 18px;
+  top: -15px;
+  left: 40px;
   margin: 0;
 }
 .detail-block .detailbox > .title img {
-  height: 50px;
+  height: 54px;
   display: block;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 767px) {
   .detail-block .detailbox > .title {
-    top: -22px;
-    left: 8px;
+    left: 20px;
   }
   .detail-block .detailbox > .title img {
-    height: 38px;
+    height: 40px;
   }
 }
 
@@ -1245,35 +1511,35 @@ body._ios a:hover {
   position: relative;
 }
 .detail-table tr .title, .detail-table tr .detail {
-  padding: 22px 0;
+  padding: 24px 0;
   text-align: left;
   vertical-align: top;
 }
 @media screen and (max-width: 767px) {
   .detail-table tr .title, .detail-table tr .detail {
     display: block;
-    padding: 16px 0;
+    padding: 18px 0;
   }
 }
 .detail-table tr .title {
-  width: 24%;
+  font-size: 1.0625rem;
 }
 @media (max-width: 767px) {
   .detail-table tr .title {
-    width: 100%;
     padding-bottom: 0;
+    font-size: 0.9375rem;
   }
 }
 @media (max-width: 767px) {
   .detail-table tr .detail {
-    padding-top: 10px;
+    padding-top: 12px;
   }
 }
 .detail-table tr:last-child .title, .detail-table tr:last-child .detail {
   padding-bottom: 0;
 }
 .detail-table tr:not(:last-of-type) .title, .detail-table tr:not(:last-of-type) .detail {
-  border-bottom: 2px dotted #B7B7B7;
+  border-bottom: 2px dotted black;
 }
 @media screen and (max-width: 767px) {
   .detail-table tr:not(:last-of-type) .title {
@@ -1313,16 +1579,16 @@ body._ios a:hover {
 }
 .detail-table .detail .star {
   display: inline-block;
-  margin-top: 0.375rem;
-  margin-bottom: 0.375rem;
-  color: #13AE67;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  color: #2B9B4B;
   font-weight: bold;
 }
 .detail-table .detail .star::before {
   content: "";
   display: inline-block;
-  width: 0.9em;
-  height: 0.9em;
+  width: 0.8em;
+  height: 0.8em;
   margin-right: 0.2em;
   -webkit-mask-image: url(../img/Icon-star.svg);
           mask-image: url(../img/Icon-star.svg);
@@ -1332,7 +1598,7 @@ body._ios a:hover {
           mask-position: center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  background: #13AE67;
+  background: #2B9B4B;
 }
 .detail-table .title {
   width: 31.4410480349%;
@@ -1352,7 +1618,7 @@ body._ios a:hover {
     width: 100%;
   }
 }
-.detail-table .detail .aupay, .detail-table .detail .dbarai, .detail-table .detail .paypay, .detail-table .detail .rakutenpay, .detail-table .detail .rakutenedy, .detail-table .detail .ieonpay {
+.detail-table .detail .aupay, .detail-table .detail .dbarai, .detail-table .detail .paypay, .detail-table .detail .rakutenpay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1371,7 +1637,7 @@ body._ios a:hover {
   gap: 0.5em;
   margin-top: 14px;
 }
-.detail-table .detail .aupay .label, .detail-table .detail .dbarai .label, .detail-table .detail .paypay .label, .detail-table .detail .rakutenpay .label, .detail-table .detail .rakutenedy .label, .detail-table .detail .ieonpay .label {
+.detail-table .detail .aupay .label, .detail-table .detail .dbarai .label, .detail-table .detail .paypay .label, .detail-table .detail .rakutenpay .label {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -1379,32 +1645,32 @@ body._ios a:hover {
       flex-shrink: 0;
   color: #fff;
   font-weight: 600;
-  width: 80px;
+  width: 74px;
   text-align: center;
   border-radius: 4px;
   margin: 0;
-  padding: 1px 0 2px;
+  padding: 0.1em 0;
   letter-spacing: 0;
 }
 @media (max-width: 767px) {
-  .detail-table .detail .aupay .label, .detail-table .detail .dbarai .label, .detail-table .detail .paypay .label, .detail-table .detail .rakutenpay .label, .detail-table .detail .rakutenedy .label, .detail-table .detail .ieonpay .label {
+  .detail-table .detail .aupay .label, .detail-table .detail .dbarai .label, .detail-table .detail .paypay .label, .detail-table .detail .rakutenpay .label {
     width: 64px;
   }
 }
-.detail-table .detail .aupay .txt, .detail-table .detail .dbarai .txt, .detail-table .detail .paypay .txt, .detail-table .detail .rakutenpay .txt, .detail-table .detail .rakutenedy .txt, .detail-table .detail .ieonpay .txt {
+.detail-table .detail .aupay .txt, .detail-table .detail .dbarai .txt, .detail-table .detail .paypay .txt, .detail-table .detail .rakutenpay .txt {
   width: 100%;
   margin: 0;
   letter-spacing: 0;
 }
-.detail-table .detail .aupay .txt > .note, .detail-table .detail .dbarai .txt > .note, .detail-table .detail .paypay .txt > .note, .detail-table .detail .rakutenpay .txt > .note, .detail-table .detail .rakutenedy .txt > .note, .detail-table .detail .ieonpay .txt > .note {
+.detail-table .detail .aupay .txt > .note, .detail-table .detail .dbarai .txt > .note, .detail-table .detail .paypay .txt > .note, .detail-table .detail .rakutenpay .txt > .note {
   display: inline-block;
   margin-left: 0.5em;
   font-size: 0.8em;
 }
-.detail-table .detail .aupay .txt > .note.-m0, .detail-table .detail .dbarai .txt > .note.-m0, .detail-table .detail .paypay .txt > .note.-m0, .detail-table .detail .rakutenpay .txt > .note.-m0, .detail-table .detail .rakutenedy .txt > .note.-m0, .detail-table .detail .ieonpay .txt > .note.-m0 {
+.detail-table .detail .aupay .txt > .note.-m0, .detail-table .detail .dbarai .txt > .note.-m0, .detail-table .detail .paypay .txt > .note.-m0, .detail-table .detail .rakutenpay .txt > .note.-m0 {
   margin: 0;
 }
-.detail-table .detail .aupay .txt > .note::before, .detail-table .detail .dbarai .txt > .note::before, .detail-table .detail .paypay .txt > .note::before, .detail-table .detail .rakutenpay .txt > .note::before, .detail-table .detail .rakutenedy .txt > .note::before, .detail-table .detail .ieonpay .txt > .note::before {
+.detail-table .detail .aupay .txt > .note::before, .detail-table .detail .dbarai .txt > .note::before, .detail-table .detail .paypay .txt > .note::before, .detail-table .detail .rakutenpay .txt > .note::before {
   content: "※";
   color: #DE0010;
 }
@@ -1419,12 +1685,6 @@ body._ios a:hover {
 }
 .detail-table .detail .rakutenpay .label {
   background-color: #D60000;
-}
-.detail-table .detail .rakutenedy .label {
-  background-color: #0E0046;
-}
-.detail-table .detail .ieonpay .label {
-  background-color: #B50081;
 }
 .detail-table .notes {
   margin: 8px 0 0 0;
@@ -1456,28 +1716,22 @@ body._ios a:hover {
 .campaign-notesBox {
   position: relative;
   background: white;
-  border-radius: 8px;
-  margin-top: 60px;
-  padding: 40px;
-  -webkit-box-shadow: 0 0 32px 0 rgba(192, 240, 194, 0.64);
-          box-shadow: 0 0 32px 0 rgba(192, 240, 194, 0.64);
+  margin-top: 80px;
+  padding: 40px 50px;
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
 }
 @media screen and (max-width: 767px) {
   .campaign-notesBox {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 24px;
   }
 }
 .campaign-notesBox .list {
-  margin: 1em 0 0;
-  padding-left: 1.2em;
+  margin: 20px 0 0;
+  padding-left: 1.5em;
+  font-size: 0.9375rem;
   line-height: 2;
-}
-.campaign-notesBox .list > .item {
-  padding-left: 0.2em;
-}
-.campaign-notesBox .list > .item + .item {
-  margin-top: 8px;
 }
 @media screen and (max-width: 767px) {
   .campaign-notesBox .list {
@@ -1487,14 +1741,31 @@ body._ios a:hover {
 }
 
 .grant-text {
-  margin-top: 70px;
-  margin-bottom: 0;
-  padding: 0;
+  margin-top: 56px;
+  padding: 0 80px;
+  padding-bottom: 20px;
   position: relative;
+}
+.grant-text::before, .grant-text::after {
+  width: 28.3%;
+  height: 243px;
+  content: "";
+  position: absolute;
+  z-index: 2;
+}
+.grant-text::before {
+  top: -72px;
+  left: -66px;
+  background: url(../../images/grant-deco01.png) no-repeat top center/contain;
+}
+.grant-text::after {
+  top: -82px;
+  right: -55px;
+  background: url(../../images/grant-deco02.png) no-repeat top center/contain;
 }
 .grant-text > img {
   display: block;
-  width: 810px;
+  width: 814px;
   max-width: 100%;
   position: relative;
   margin: 0 auto;
@@ -1502,7 +1773,20 @@ body._ios a:hover {
 }
 @media screen and (max-width: 767px) {
   .grant-text {
-    margin-top: 40px;
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+  .grant-text::before {
+    top: -20px;
+    left: -50px;
+    max-width: 160px;
+    width: 40%;
+  }
+  .grant-text::after {
+    top: -24px;
+    right: -50px;
+    max-width: 160px;
+    width: 40%;
   }
   .grant-text > img {
     width: 400px;
@@ -1637,6 +1921,9 @@ body._ios a:hover {
 }
 .payment-notes-box .dotline > a {
   font-size: 1.125rem;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: 600;
   color: var(--color);
   text-decoration: none;
@@ -1682,7 +1969,8 @@ body._ios a:hover {
 }
 
 .l-consultation {
-  padding: 80px 0 100px;
+  padding: 90px 0 100px;
+  background: url(../img/bg-main.png) repeat center/100px;
 }
 @media (max-width: 767px) {
   .l-consultation {
@@ -1691,17 +1979,66 @@ body._ios a:hover {
 }
 
 .consultation-title {
-  margin: 0 auto;
-  max-width: 875px;
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+.consultation-title img {
+  -webkit-filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.08));
+          filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.08));
+}
+@media (max-width: 767px) {
+  .consultation-title {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+
 .consultation-box {
-  margin-top: 40px;
+  margin-top: 48px;
+  border-radius: 20px;
   background-color: #fff;
-  padding: 80px;
-  -webkit-box-shadow: 0 3px 16px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 3px 16px rgba(0, 0, 0, 0.06);
-  background: url(../../images/bg-consultation.png) repeat-y top center/100% auto, #FFFBE0;
+  padding: 67px 78px 80px;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
   position: relative;
+}
+.consultation-box::before, .consultation-box::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: 36px;
+  background: #F5F0D0;
+  border-radius: 100px;
+  -webkit-box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.06);
+          box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 767px) {
+  .consultation-box::before, .consultation-box::after {
+    width: 12px;
+    height: 12px;
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.06);
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.06);
+    top: 12px;
+  }
+}
+.consultation-box::before {
+  left: 36px;
+}
+@media (max-width: 767px) {
+  .consultation-box::before {
+    left: 12px;
+  }
+}
+.consultation-box::after {
+  right: 36px;
+}
+@media (max-width: 767px) {
+  .consultation-box::after {
+    right: 12px;
+  }
 }
 .consultation-box > .title {
   text-align: center;
@@ -1709,21 +2046,17 @@ body._ios a:hover {
 }
 @media (max-width: 767px) {
   .consultation-box {
-    margin-top: 16px;
-    padding: 24px 10px;
+    margin-top: 24px;
+    padding: 40px 20px 30px;
   }
 }
 
-.consultation-mochimono {
-  margin: 10px 0 0;
-}
-
-.consultation-schedule {
-  margin: 24px 0 0;
+.consultation-businesstrip {
+  margin: 40px 0;
 }
 @media (max-width: 767px) {
-  .consultation-schedule {
-    margin-top: 16px;
+  .consultation-businesstrip {
+    margin: 24px 0;
   }
 }
 
@@ -1817,6 +2150,9 @@ body._ios a:hover {
 }
 .store-subBox > .labels > li {
   color: #E81929;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 8px;
@@ -1846,6 +2182,9 @@ body._ios a:hover {
   border-radius: 7px;
   z-index: 2;
   content: "終了しました";
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   color: white;
   font-size: 1.375rem;
   font-weight: bold;
@@ -2213,6 +2552,9 @@ body._ios a:hover {
 .searchStore-block > .title {
   position: relative;
   font-size: 1.5rem;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   text-align: center;
   margin: 0 auto;
   width: -webkit-fit-content;
@@ -2231,7 +2573,7 @@ body._ios a:hover {
   height: 30px;
   width: 1px;
   top: 50%;
-  border-left: 4px dotted #13AE67;
+  border-left: 4px dotted #2B9B4B;
 }
 .searchStore-block > .title::before {
   -webkit-transform: translateY(-50%) rotate(-25deg);
@@ -2252,7 +2594,7 @@ body._ios a:hover {
   background-color: white;
   margin: 32px auto 0;
   padding: 40px 50px;
-  border: solid 4px #13AE67;
+  border: solid 4px #2B9B4B;
   border-radius: 20px;
 }
 @media (max-width: 767px) {
@@ -2291,7 +2633,7 @@ body._ios a:hover {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #13AE67;
+  background-color: #2B9B4B;
   left: 0;
   top: 0.65em;
   border-radius: 100%;
@@ -2415,8 +2757,8 @@ body._ios a:hover {
   border-radius: 8px;
   border-spacing: 0;
   border: none;
-  border-left: 2px solid #13AE67;
-  border-top: 2px solid #13AE67;
+  border-left: 2px solid #2B9B4B;
+  border-top: 2px solid #2B9B4B;
 }
 @media (max-width: 767px) {
   .search-table table {
@@ -2427,8 +2769,8 @@ body._ios a:hover {
 .search-table table tr > * {
   padding: 12px 18px;
   border: none;
-  border-right: 2px solid #13AE67;
-  border-bottom: 2px solid #13AE67;
+  border-right: 2px solid #2B9B4B;
+  border-bottom: 2px solid #2B9B4B;
 }
 @media (max-width: 767px) {
   .search-table table tr > * {
@@ -2436,7 +2778,7 @@ body._ios a:hover {
   }
 }
 .search-table table > thead {
-  background: #13AE67;
+  background: #2B9B4B;
 }
 .search-table table > thead tr th {
   white-space: nowrap;
@@ -2511,11 +2853,11 @@ body._ios a:hover {
   min-width: 33px;
   padding: 10px;
   background: white;
-  color: #13AE67;
+  color: #2B9B4B;
   text-align: center;
 }
 .search-pager > li.cur > span {
-  background: #13AE67;
+  background: #2B9B4B;
   color: #fff;
 }
 .search-pager > li a {
@@ -2525,7 +2867,7 @@ body._ios a:hover {
 .search-pager > li .anchor {
   padding: 0 16px;
   font-size: 1.25rem;
-  color: #13AE67;
+  color: #2B9B4B;
 }
 
 .search-wrap {
@@ -2569,7 +2911,7 @@ body._ios a:hover {
   margin-right: 10px;
   font-size: 1.125rem;
   font-weight: bold;
-  color: #13AE67;
+  color: #2B9B4B;
 }
 .search-wrap > .category > .search-select {
   display: -webkit-inline-box;
@@ -2587,7 +2929,7 @@ body._ios a:hover {
           appearance: none;
   width: 100%;
   padding: 12px;
-  border: 2px solid #13AE67;
+  border: 2px solid #2B9B4B;
   border-radius: 3px;
   background: #fff;
   cursor: pointer;
@@ -2597,7 +2939,7 @@ body._ios a:hover {
   right: 15px;
   width: 10px;
   height: 7px;
-  background: #13AE67;
+  background: #2B9B4B;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   content: "";
   pointer-events: none;
@@ -2613,16 +2955,16 @@ body._ios a:hover {
   margin-right: 10px;
   font-size: 1.125rem;
   font-weight: bold;
-  color: #13AE67;
+  color: #2B9B4B;
 }
 .search-wrap > .keyword > .search-input {
   padding: 12px;
   border-radius: 3px;
-  border: 2px solid #13AE67;
+  border: 2px solid #2B9B4B;
   width: 100%;
 }
 .search-wrap > .btn-search {
-  background: #13AE67;
+  background: #2B9B4B;
   color: #fff;
   border: none;
   padding: 8px 10px;
@@ -2650,16 +2992,15 @@ body._ios a:hover {
 }
 
 .l-callcenter {
-  background: url(../../images/callcenter-deco01.png) no-repeat left center/auto 100%, url(../../images/callcenter-deco02.png) no-repeat right center/auto 100%, url(../../images/bg-callcenter.png) no-repeat top center/cover;
+  background: url(../img/bg-callcenter-deco.png) repeat-y top center/100% auto, url(../img/bg-callcenter.png) no-repeat top center/cover;
   padding: 80px 0 100px;
 }
 .l-callcenter.-last {
-  padding: 80px 0;
+  padding: 90px 0;
 }
 @media (max-width: 767px) {
   .l-callcenter {
     padding: 40px 0 50px;
-    background: url(../../images/callcenter-deco01.png) no-repeat left top/auto 70%, url(../../images/callcenter-deco02.png) no-repeat right top/auto 70%, url(../../images/bg-callcenter.png) no-repeat top center/cover;
   }
   .l-callcenter.-last {
     padding: 40px 0 36px;
@@ -2670,12 +3011,11 @@ body._ios a:hover {
   text-align: center;
   margin: 0;
   display: block;
-  padding: 0 35px;
+  padding: 0 32px;
 }
 @media (max-width: 767px) {
   .l-callcenter-box .callcenter-block > .title {
     padding: 0;
-    margin: 0 -10px;
   }
   .l-callcenter-box .callcenter-block > .title img {
     display: block;
@@ -2684,22 +3024,24 @@ body._ios a:hover {
 .l-callcenter-box .callcenter-block > .phone {
   z-index: 1;
   position: relative;
-  padding: 0 5%;
+  padding: 0 10%;
 }
 @media (max-width: 767px) {
   .l-callcenter-box .callcenter-block > .phone {
     padding: 0 20px;
   }
+  .l-callcenter-box .callcenter-block > .phone img {
+    max-width: 500px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 }
 .l-callcenter-box .callcenter-block > .phone .dial {
   text-align: center;
-  max-width: 688px;
-  margin: 20px auto 0;
+  max-width: 640px;
+  margin: 30px auto 0;
   display: block;
-}
-.l-callcenter-box .callcenter-block > .phone .dial > img {
-  -webkit-filter: drop-shadow(0 0 16px #F06F03);
-          filter: drop-shadow(0 0 16px #F06F03);
 }
 @media (max-width: 767px) {
   .l-callcenter-box .callcenter-block > .phone .dial {
@@ -2707,16 +3049,23 @@ body._ios a:hover {
   }
 }
 .l-callcenter-box .callcenter-block > .phone .times {
-  text-shadow: 0 0 16px rgba(240, 3, 3, 0.64);
+  font-size: 1.0625rem;
+  line-height: 1.8;
   margin: 22px 0 0;
   text-align: center;
   color: #fff;
   font-weight: bold;
 }
+.l-callcenter-box .callcenter-block > .phone .times small {
+  font-size: 1rem;
+}
 @media screen and (max-width: 767px) {
   .l-callcenter-box .callcenter-block > .phone .times {
     font-size: 0.875rem;
     margin-top: 16px;
+  }
+  .l-callcenter-box .callcenter-block > .phone .times small {
+    font-size: 0.8125rem;
   }
 }
 .l-callcenter-box .cashless-block {
@@ -2730,6 +3079,8 @@ body._ios a:hover {
           box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
   max-width: 920px;
   margin: 60px auto 0;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
 }
 .l-callcenter-box .cashless-block::before {
   position: absolute;
@@ -2746,15 +3097,6 @@ body._ios a:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.l-callcenter-box .cashless-block::after {
-  position: absolute;
-  content: "";
-  width: 14.2%;
-  height: 83px;
-  bottom: 17px;
-  right: calc(-14.2% - 42px);
-  background: url(../img/callcenter-deco03.png) no-repeat center bottom/contain;
-}
 @media screen and (max-width: 767px) {
   .l-callcenter-box .cashless-block {
     padding: 30px 20px;
@@ -2763,15 +3105,14 @@ body._ios a:hover {
   .l-callcenter-box .cashless-block::before {
     top: -24px;
   }
-  .l-callcenter-box .cashless-block::after {
-    right: -24px;
-    bottom: -30px;
-  }
 }
 .l-callcenter-box .cashless-block > .title {
   margin: auto;
   text-align: center;
   font-size: 1.4375rem;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
 }
 .l-callcenter-box .cashless-block > .title span {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #FDEF37));
@@ -2833,6 +3174,9 @@ body._ios a:hover {
   }
 }
 .l-callcenter-box .cashless-block > .paylist .item .tel {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-size: 1.4375rem;
   color: #000;
   text-decoration: none;
@@ -2875,6 +3219,9 @@ body._ios a:hover {
   padding-left: 0.7em;
   font-size: 0.8125rem;
   color: #00AAD0;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
 }
 .l-callcenter-box .cashless-block > .paylist .item .title2:not(:first-child) {
@@ -2914,6 +3261,9 @@ body._ios a:hover {
   font-size: 0.875rem;
   margin: 0;
   display: inline-block;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
@@ -2928,5 +3278,8 @@ body._ios a:hover {
   font-size: 0.875rem;
   color: #000;
   display: inline-block;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "", "Zen Maru Gothic", sans-serif;
   font-weight: bold;
 }

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@use "sass:color";
+@use "settings/_index" as *; // 設定
+
+/**************************************************/
+/* structure 構造を定義 */
+/**************************************************/
+
+//==================================================
+// コンテンツ
+//==================================================
+// コンテンツ
+.l-page-container {
+  position: relative; overflow: hidden; z-index: 1;
+  background: url(../../images/bg-main.png) repeat center / 100px;
+}
+
+//コンテンツエリア
+.l-page-contents {
+  @include contentWidth; position: relative; padding: 0 40px;
+  >*:first-child {
+    margin-top: 0 !important;
+  }
+  @media screen and (max-width: $breakPoint-md) {
+    padding: 0 20px;
+  }
+}
+
+//==================================================
+// サイトヘッダー 
+//==================================================
+//==================================================
+// サイトフッター
+//==================================================
+.l-header,
+.l-footer{
+  box-sizing: border-box;
+  background-color: $white;
+  padding: 16px;
+  @media screen and (max-width: $breakPoint-md) {
+    // padding: 8px 0;
+  }
+  .logo{
+    display: block;
+    max-width: 100%;
+    width: 149px;
+    margin: 0 auto;
+    @media screen and (max-width: $breakPoint-md) {
+      width: 100px;
+    }
+  }
+}
+
+
+//ロゴ
+// .c-header-logo {
+//   margin: 0; padding: 20px 20px 20px 40px; color: $black; line-height: 0;
+//   >a { display: inline-block; color: inherit;text-decoration: none; }
+//   @media (max-width: $breakPoint-lg) {
+//     width: 120px; padding: 0;
+//   }
+// }
+
+//ハンバーガーアイコン
+.c-menuBtn {
+  display: none; position: absolute; top: 0; right: 0; margin: 0; width: $headerHeightSP; height: $headerHeightSP; cursor: pointer;
+  >.bar {
+    top: 50%; left: 50%; margin-top: -1px; margin-left: -13px;
+    &, &::before, &::after { position: absolute; display: block; width: 24px; height: 2px; background: #281284; border-radius: 2px; content: ""; transition: all .2s ease-out; }
+    &::before { top: -8px; }
+    &::after { top: 8px; }
+  }
+  &.-open {
+    >.bar {
+      background-color: transparent;
+      &::before { top: 0; transform: rotate(135deg); }
+      &::after { top: 0; transform: rotate(-135deg); }
+    }
+  }
+  @media (max-width: $breakPoint-lg) {
+    display: block;
+  }
+}
+
+// グローバルメニュー
+//----------------------------------------
+
+.l-global-nav {
+  position: absolute; top: 0; bottom: 0; right: 0; margin: auto 0; line-height: 1; height: $headerHeight;
+  @media (max-width: $breakPoint-lg) {
+    display: none;
+  }
+}
+
+.c-gnav-list {
+  @include flexbox(flex-start, nowrap); box-sizing: border-box; height: 100%; margin: 0 auto; padding: 15px 30px; gap: 40px;
+  >li {
+    position: relative; min-width: 100px; line-height: 1; text-align: center; letter-spacing: 1px; text-transform: uppercase;
+  }
+  >li >.btn {
+    display: flex; align-items: center; justify-content: center; box-sizing: border-box; height: 100%; padding: 1em 0; color: #281284; text-decoration: none; font-weight: bold;
+    &:hover,
+    &.-current {
+      background: linear-gradient(0, transparent 0, transparent 20%, #FFFF01 20%, #FFFF01 40%, transparent 40%, transparent 100%); opacity: 1;
+    }
+  }
+}
+
+// スマホメニュー
+//----------------------------------------
+
+.l-sp-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: $headerHeightSP;
+  background-color: color.scale($white, $alpha: -10%);
+  z-index: 100;
+  &.-open { display: block; }
+  >.container {
+    @include hideScrollbar;
+    max-height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (min-width: $breakPoint-lg + 1) {
+    display: none !important;
+  }
+}
+
+.c-spnav-list {
+  margin: 0 auto; padding: 0 20px; list-style: none;
+  >li {
+    a {
+      display: block; padding: 20px 0; color: #281284; text-decoration: none; width: fit-content; font-weight: bold;
+      &.-current, &:hover {
+        background: linear-gradient(0, transparent 0, transparent 35%, #FFFF01 35%, #FFFF01 45%, transparent 45%, transparent 100%); opacity: 1;
+      }
+    }
+  }
+}
+
+//==================================================
+// メインビジュアル
+//==================================================
+.l-main-visual {
+  >.image >img { width: 100%; }
+  position: relative;
+  // .lead {
+  //   z-index: 3;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   color: #fff;
+  //   font-weight: bold;
+  //   @include fontSize(40);
+  //   text-align: center;
+  //   line-height: 1.5;
+  //   padding: 0 10px;
+  //   width: 100%;
+  //   box-sizing: border-box;
+  // }
+}

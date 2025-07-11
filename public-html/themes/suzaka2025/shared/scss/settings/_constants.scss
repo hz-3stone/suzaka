@@ -129,15 +129,14 @@ $aupay: $orange;
 $dbarai: $gray3;
 $paypay: #EF002F;
 $rakutenpay: $empireRed;
-$rakutenedy: #0E0046;
-$ieonpay: #B50081;
+$ieonpay: #B50081; 
 
 //==================================================
 // テーマ
 //==================================================
 
 $baseColor: map.get($colors, "white"); // background-color
-$mainColor: #13AE67;
+$mainColor: map.get($colors, "green");
 $accentColor: map.get($colors, "yellow");
 $alertColor: map.get($colors, "black"); //警告
 
@@ -179,6 +178,13 @@ $YuMin: "游明朝", YuMincho, "游明朝体", "Yu Mincho";
 $NotoSansJP: "Noto Sans JP", "Noto Sans CJK JP";
 $NotoSerifJP: "Noto Serif JP";
 
+// zen maru ゴシック
+$ZenMaruGothic: "Zen Maru Gothic";
+
+//Yaku Han JP
+$YakuHanJP: YakuHanJP_Noto;
+$YakuHanMP: YakuHanMP_Noto;
+
 //----------------------------------------
 
 // サイズ
@@ -186,6 +192,7 @@ $baseFontSize: 16;
 
 // font family
 $baseFonts: $NotoSansJP, $Hiragino, $YuGothic, 'メイリオ', Meiryo, sans-serif;
+$subFonts: $ZenMaruGothic, sans-serif;
 
 
 //==================================================

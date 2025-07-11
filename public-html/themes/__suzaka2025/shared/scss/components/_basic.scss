@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+@use "../settings/_index" as *; // 設定
+
+/**************************************************/
+/* components - basic */
+/**************************************************/
+
+//==================================================
+// card
+//==================================================
+// .c-card-heading {
+//   margin: 40px 0 0 0;
+//   border-radius: 8px;
+//   text-align: center;
+//   color: white;
+//   font-weight: bold;
+//   @include fontSize(22);
+//   padding: 10px;
+//   background: #FF701A;
+//   &.-business {
+//     background: #22AC38;
+//     margin-top: 30px;
+//   }
+//   &.-businesstrip {
+//     background: #E71F18;
+//     margin-top: 32px;
+//   }
+//   @media (max-width: $breakPoint-md) {
+//     margin-top: 30px;
+//     @include fontSize(18);
+//     padding: 8px;
+//     &.-business {
+//       margin-top: 30px;
+//     }
+//   }
+// }
+// .c-card-columns  {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 42px;
+//   gap: 40px;
+//   @media (max-width: $breakPoint-md) {
+//     margin-top: 24px;
+//     gap: 30px;
+//     flex-direction: column;
+//   }
+//   .card{
+//     width: calc(50% - 20px);
+//     box-sizing: border-box;
+//     @media (max-width: $breakPoint-md) {
+//       width: 100%;
+//     }
+//   }
+//   .card.-finish {
+//     .img {
+//       position: relative;
+//       border-radius: rem(7);
+//       overflow: hidden;
+//       &::before {
+//         content: "終了しました";
+//         color: white;
+//         @include fontSize(22);
+//         font-weight: bold;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         width: 100%;
+//         height: 100%;
+//         background: rgba(0,0,0,0.7);
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         z-index: 2;
+//       }
+//     }
+//   }
+//   .textarea{
+//     margin-top: 24px;
+//     @media (max-width: $breakPoint-md) {
+//       margin-top: 16px;
+//     }
+//     .date,.location{
+//       display: flex;
+//       flex-wrap: wrap;
+//       align-items: flex-start;
+//       margin: 0;
+//       gap: 10px;
+//       @media (max-width: $breakPoint-md) {
+//         display: block;
+//       }
+//       span{ font-weight: 600; }
+//       .label{
+//         display: block;
+//         width: min(70px, 100%);
+//         font-weight: bold;
+//         text-align: center;
+//         background-color: $black;
+//         color: $white;
+//         border-radius: 100px;
+//         box-sizing: border-box;
+//         padding: 3px;
+//         line-height: 1.5;
+//         @media (max-width: $breakPoint-md) {
+//           @include fontSize(14);
+//           width: min(60px, 100%);
+//           padding: 2px;
+//         }
+//       }
+//       .txt{
+//         flex: 1;
+//         line-height: 1.9;
+//         margin: 0;
+//         font-weight: bold;
+//         @media (max-width: $breakPoint-md) {
+//           display: block;
+//           width: 100%;
+//           margin-top: .4em;
+//           @include fontSize(14);
+//         }
+//       }
+//     }
+//     .location{
+//       margin-top: 16px;
+//       @media (max-width: $breakPoint-md) {
+//         margin-top: 10px;
+//       }
+//     }
+//   }
+//   .indent {
+//     margin: 20px 0 0 0;
+//     padding: 0;
+//     list-style: none;
+//     font-weight: 500;
+//     line-height: calc(26 / 16);
+//     >li {
+//       color: #E62119;
+//       padding-left: 1em;
+//       text-indent: -1em;
+//     }
+//     @media (max-width: $breakPoint-md) {
+//       margin-top: 16px;
+//       @include fontSize(14);
+//     }
+//   }
+// }
+
+//==================================================
+// Text
+//==================================================
+.c-text-a{
+  @include fontSize(16);
+  margin: 0;
+  line-height: 1.8;
+  text-align: justify;
+  @media screen and (max-width: $breakPoint-md) {
+    @include fontSize(14);
+  }
+}
+
+.c-marker {
+  background: linear-gradient(transparent 0, transparent 70%, #FEE05D 60%, #FEE05D 100%);
+  font-weight: 700;
+}
+//==================================================
+// Heading
+//==================================================
+.c-heading-a {
+  margin: 30px 0 0 0;
+  padding-bottom: 12px;
+  padding-left: 1.4em;
+  @include fontSize(19);
+  color: #E8380D;
+  position: relative;
+  border-bottom: solid 2px #E8380D;
+  line-height: 1.5;
+  &::before {
+    content: "";
+    position: absolute;
+    top: .3em;
+    left: 0;
+    width: 1em;
+    height: 1.1em;
+    margin: auto;
+    background: url(../img/icon-heading-a.png) no-repeat center/contain;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  @media (max-width: $breakPoint-md) {
+    @include fontSize(16);
+  }
+}
+.c-heading-b {
+  position: relative;
+  @include fontSize(19);
+  color: $mainColor;
+  margin: 0;
+  padding-left: 31px;
+  padding-bottom: 17px;
+  @media screen and (max-width: $breakPoint-md) {
+    @include fontSize(16);
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  &::before{
+    position: absolute;
+    content: "";
+    background: $mainColor;
+    mask-image: url(../img/icon-expmark.svg);
+    mask-size: contain;
+    width: 22px;
+    height: 22px;
+    top: calc(50% - 5px);
+    left: 0;
+    transform: translateY(-50%);
+    @media screen and (max-width: $breakPoint-md) {
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+    }
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    background: $mainColor;
+    mask-image: url(../img/decoration-pinkcircle.svg);
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.c-heading-c{
+  @include fontSize(18);
+  color: $white;
+  margin: 0;
+  @media (max-width: $breakPoint-md) {
+    @include fontSize(16);
+  }
+}
+
+.c-heading-d {
+  @include flexbox(center, nowrap);
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  @include fontSize(26);
+  text-align: center;
+  padding: 15px 45px 8px;
+  box-sizing: border-box;
+  color: white;
+  background-image: repeating-linear-gradient(120deg, transparent, transparent 24px, rgba(255, 255, 255, 0.1) 24px, rgba(255, 255, 255, 0.1) 48px );
+  clip-path: polygon(0% 0%, 100% 0%, calc(100% - 18px) 50%, 100% 100%, 0% 100%, 18px 50%);
+  &::before, &::after {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    height: 4px;
+    border-top: 1.5px solid white;
+    border-bottom: 2.5px dotted white;
+  }
+  >.txt {
+    position: relative;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 22px;
+    transform: translateY(-.15em);
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 31px;
+      height: 28px;
+      margin-right: 10px;
+      background: url(../img/icon-attention.png) no-repeat center/contain;
+    }
+  }
+  @media (max-width: $breakPoint-md) {
+    @include fontSize(18);
+    >.txt {
+      padding: 0 10px;
+      &::before {
+        width: 21px;
+        margin-right: 6px;
+      }
+    }
+  }
+  @media (max-width: $breakPoint-sm) {
+    padding: 12px 14px 8px;
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 50%, 100% 100%, 0% 100%, 10px 50%);
+    &::before, &::after { content: none; }
+    >.txt {
+      padding: 0;
+    }
+  }
+}
+
+
+.c-heading-e {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  >.txt {
+    @include fontSize(18);
+    display: inline;
+    background: linear-gradient(transparent 60%, $yellow 60%);
+    font-weight: 600;
+    transition: all 1s ease;
+    transition-delay: .5s;
+    letter-spacing: 0;
+  }
+  @media (max-width: $breakPoint-md) {
+    >.txt { @include fontSize(16); }
+  }
+}
+
+//==================================================
+// Table
+//==================================================
+
+
+// scrollTrigger
+//----------------------------------------
+
+[data-trigger] {
+  &.-invisible {
+    opacity: 0;
+  }
+  &.-visible {
+    opacity: 1; transition: opacity .8s ease-in;
+  }
+}
+
+// fadeIn
+[data-trigger="fadeIn"] {
+  &.-invisible {
+    opacity: 0;
+    :where(.c-heading-d, .c-heading-e) >.txt{
+      background-size: 0 30%;
+    }
+  }
+  &.-visible {
+    opacity: 1; transition: opacity .8s ease-in;
+  }
+}
+
+// fadeInUp
+[data-trigger="fadeInUp"] {
+  &.-invisible {
+    transform: translateY(40px);
+  }
+  &.-visible {
+    transition: opacity .8s ease-out, transform .8s ease-out; transform: translateY(0);
+  }
+}
+
+// fadeInUp
+[data-trigger="fadeInLeft"] {
+  &.-invisible {
+    transform: translateX(-40px);
+  }
+  &.-visible {
+    transition: opacity .8s ease-out, transform .8s ease-out; transform: translateX(0);
+  }
+}
+
+// custom
+.box[data-trigger="custom"] {
+  &.-invisible {
+    opacity: 1; transform: rotate(360deg);
+  }
+  &.-visible {
+    transition: transform 1s ease-in-out; transform: rotate(0deg);
+  }
+}
+
+//----------------------------------------
