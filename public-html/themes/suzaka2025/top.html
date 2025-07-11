@@ -16,14 +16,14 @@
 
 <div id="inbox" class="inbox">
   @include("/shared/inc/site-header.html")
-  @include("/admin/action.html")
+  <main role="main" class="l-page-container">
   <div class="l-main-visual">
     <div class="image">
       <img src="/images/mainvisual.png" alt="スマホを持っていない方も！持っている方も！須坂市キャッシュレス決済ポイント還元事業 開催期間：未定 キャンペーン期間内であっても予算上限に達した場合、早期に終了となります au PAY（コード支払い）・d払い・PayPay・楽天ペイ（コード・QR・セルフ払い）・楽天Edy（カード式）のいずれかを対象店舗で利用すると最大30％戻ってくる！ 付与上限（1決済サービス事業者あたり）1,500円相当／回（不課税）、7,500円相当／期間（不課税）" width="1366" height="768" class="_view-md-high">
       <img src="/images/mainvisual_sp.png" alt="スマホを持っていない方も！持っている方も！須坂市キャッシュレス決済ポイント還元事業 開催期間：未定 キャンペーン期間内であっても予算上限に達した場合、早期に終了となります au PAY（コード支払い）・d払い・PayPay・楽天ペイ（コード・QR・セルフ払い）・楽天Edy（カード式）のいずれかを対象店舗で利用すると最大30％戻ってくる！ 付与上限（1決済サービス事業者あたり）1,500円相当／回（不課税）、7,500円相当／期間（不課税）" width="1366" height="768" class="_view-md-low">
     </div>
   </div>
-  <main role="main" class="l-page-container">
+  @include("/admin/action.html")
 
   <section class="l-campaign">
     <div class="l-page-contents">
@@ -150,15 +150,193 @@
         </ol>
       </div>
 
-      <p class="grant-text" data-trigger="fadeIn">
-        <!-- TODO: 須坂市用案内画像に差し替え必要 (grant-text.png, grant-text_sp.png) -->
-        <img src="images/grant-text.png" alt="キャンペーンに関することやポイント付与条件など詳しくは各社HPを確認、またはコールセンターへお問い合わせください！" class="_view-md-high">
-        <img src="images/grant-text_sp.png" alt="キャンペーンに関することやポイント付与条件など詳しくは各社HPを確認、またはコールセンターへお問い合わせください！" class="_view-md-low">
+    <p class="grant-text" data-trigger="fadeIn">
+      <img src="images/grant-text.png" alt="キャンペーンに関することやポイント付与条件など詳しくは各社HPを確認、またはコールセンターへお問い合わせください！" class="_view-md-high">
+      <img src="images/grant-text_sp.png" alt="キャンペーンに関することやポイント付与条件など詳しくは各社HPを確認、またはコールセンターへお問い合わせください！" class="_view-md-low">
+    </p>
+
+    <div class="payment-notes-box -aupay" data-trigger="fadeIn">
+      <h3 class="c-heading-d"><span class="txt">au PAY 決済の注意事項</span></h3>
+      <div class="body">
+      <ul class="noteslist">
+        <li class="notes">
+          <p class="txt">au PAYをご利用される場合は、以下の2点が条件となります。</p>
+          <ul class="notechild">
+            <li class="note">au IDの取得とau PAY アプリが必要です。</li>
+            <li class="note">au PAY サービス利用規約への同意が必要です。</li>
+          </ul>
+        </li>
+        <li class="notes">
+          <p class="txt"> 対象機種 は、iOS12.0以上/Android™6.0以上のスマートフォン・タブレット、watchOS 6.0以上のApple Watchです。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">au PAY（コード支払い）でのお支払いにはau PAY 残高へのチャージが必要です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">1回あたりのお支払い上限額は300,000円（税込）、1日あたりの上限額は500,000円（税込）です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">本キャンペーン集計時までにKDDIに到着した売上伝票（売上情報）が対象です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">ポイント加算はシステム都合等で加算日が前後する可能性があります。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">Pontaポイントの加算時点で以下の場合は、特典加算の対象外となる場合があります。</p>
+          <ul class="notechild">
+            <li class="note">au IDが削除または無効となっている、もしくは譲渡・承継している場合。au ID統合によりau IDを変更された場合。</li>
+            <li class="note">au PAY（コード支払い）にて決済した商品・サービス等の取引のキャンセル・取消し・払戻し等がなされた場合。</li>
+            <li class="note">au PAY （コード支払い）のサービス利用規約に反する行為、またはその恐れがある場合。</li>
+          </ul>
+        </li>
+        <li class="notes">
+          <p class="txt">KDDIが不正と判断した場合、加算済ポイントやau PAY 残高の失効等をさせていただく場合があります。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">au PAY（コード支払い）は「コード支払い」と「コード読取」での支払いが対象です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">KDDIが実施する他の企画との併用はできません。</p>
+          <ul class="notechild">
+            <li class="note">ポイント抽選企画、割引クーポンを除きます。</li>
+          </ul>
+        </li>
+        <li class="notes">
+          <p class="txt">本キャンペーンは予告なく変更・終了する場合があります。</p>
+        </li>
+      </ul>
+      <div class="attention">
+        <p class="txt">iOSは、Ciscoの米国およびその他の国における商標または登録商標であり、ライセンスに基づき使用されています。<br>iPhone、iPad、Apple Watchは、米国および他の国々で登録されたApple Inc.の商標です。iPhoneの商標は、アイホン
+          株式会社のライセンスに基づき使用されています。（TM and &copy; 2025 Apple Inc. All rights reserved.）</p>
+      </div>
+      <p class="dotline">
+        <a href="https://aupay.wallet.auone.jp/" target="_blank">各種条件について等、詳しくはauホームページにてご確認ください</a>
+      </p>
+      </div>
+    </div>
+
+    <div class="payment-notes-box -dbarai" data-trigger="fadeIn">
+      <h3 class="c-heading-d"><span class="txt">d払い決済の注意事項</span></h3>
+      <div class="body">
+      <ul class="noteslist">
+        <li class="notes">
+          <p class="txt">以下の場合、本キャンペーンへの参加およびポイント進呈は無効となります。</p>
+          <ul class="notechild">
+            <li class="note">本キャンペーンで不正行為が行われたと当社が判断した場合。</li>
+            <li class="note">本規約その他当社の利用規約に違反する行為があった場合、またはその恐れがあると当社が判断した場合。</li>
+            <li class="note">dアカウント登録時の氏名・住所等が正確でない場合</li>
+          </ul>
+        </li>
+        <li class="notes">
+          <p class="txt">進呈ポイントの交換および第三者への譲渡はできません。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">本キャンペーンの内容は、予告なく変更となる場合がございます。また本規約は、随時改定する場合がございます。<br>この場合、本キャンペーンサイトなどに掲載することにより、本キャンペーン内容の変更または本規約の改定の内容を随時告知するものとします。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">本キャンペーンの適切な運営を妨げる事象が生じた場合、これに類する状況が生じた場合、またはその他本キャンペーンを継続し難い事由が生じた場合、いつでも本キャンペーンを中止または延期することができるものといたします。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">当社は、利用者が本キャンペーンに起因する損害・不利益について一切の責任を負わないものといたします。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">当社のネットワーク環境の不具合やシステムメンテナンス等により利用ができなかった場合であっても、当社は一切の責任を負いかねますので予めご了承ください。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">利用者が本キャンペーンに利用するための費用（インターネット通信料等）は全て利用者のご負担になります。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">キャンペーンのポイント進呈時までにdポイントクラブ会員を退会された方はポイント進呈の対象外となります。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">キャンペーン期間中にdポイントクラブ会員統合をされた方につきまして、dポイントクラブ会員統合前の会員情報でのお買物については、ポイント進呈の対象外となります。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">下記に該当するお支払いは、ポイント進呈の対象外となります。</p>
+          <ul class="notechild">
+            <li class="note">d払い（ネット）でのお支払い</li>
+            <li class="note">d払いタッチでのお支払い</li>
+            <li class="note">d払い（iD）でのお支払い</li>
+            <li class="note">クーポンでのお支払い</li>
+            <li class="note">キャンペーン期間内に、正常にお支払い完了とならなかったお支払い</li>
+            <li class="note">自動販売機、券売機でのお支払い（一部例外店舗がございます）</li>
+            <li class="note">ご購入をキャンセル、返品をした場合のお支払い分</li>
+            <li class="note">お支払い方法に設定しているクレジットカードや通信にエラー等があり、d払い決済が完了しなかった場合</li>
+            <li class="note">キャンペーン対象外となる商品・サービス</li>
+            <li class="note">店舗によりd払いでお支払いいただけない商品・サービスがある場合があります。</li>
+            <li class="note">キャンペーン対象外となる商品・サービスをd払いでお支払いいただいた場合、キャンペーン対象外として、ポイント進呈が無効（進呈後の場合は取り消し）となる場合がございます。</li>
+            <li class="note">タバコを含む購入は、本キャンペーンの取引の対象外となります。</li>
+            <li class="note">万が一取引にタバコの購入が含まれる場合、キャンペーン対象外として、ポイント進呈が無効（進呈後の場合は取り消し）となる場合がございます。</li>
+          </ul>
+        </li>
+      </ul>
+      <p class="dotline">
+        <a href="https://service.smt.docomo.ne.jp/keitai_payment/term/" target="_blank">各種条件について等、詳しくはd払いホームページにてご確認ください</a>
       </p>
     </div>
+    </div>
+
+    <div class="payment-notes-box -paypay" data-trigger="fadeIn">
+      <h3 class="c-heading-d"><span class="txt">PayPay決済の注意事項</span></h3>
+      <div class="body">
+      <ul class="noteslist">
+        <li class="notes">
+          <p class="txt">クレジットカード、PayPay商品券は対象外。PayPayカード（旧Yahoo! JAPANカード含む）でのお支払いはPayPayクレジット以外は対象外です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">PayPayポイントは、1ポイント＝1円相当としてお支払いでご利用いただけます。「PayPay」の支払い方法のうち、クレジットカードとの併用はできません。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">付与されるPayPayポイントはPayPay / PayPayカード公式ストアでの利用可能。出金・譲渡不可。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">PayPayで実施する複数のキャンペーンが適用される場合、付与額が高いものが適用され、重複適用されない場合があります。重複適用された場合でも、付与率は最大66.5%となります。詳細はPayPayHPよりご確認ください。</p>
+        </li>
+      </ul>
+      <div class="attention">
+        <p class="txt">１つの商品やサービスを分割で決済することはキャンペーン規約で禁じられています。<br>通常1回の決済にて支払うべき商品等代金を、複数回に分割して決済することにより景品付与を受けたことが判明した場合、本キャンペーンによるPayPayポイントは取り消されますのでご注意ください。</p>
+      </div>
+      <!-- <p class="dotline">
+        <a href="https://paypay.ne.jp/event/support-local/" target="_blank">各種条件について等、詳しくはPayPayホームページにてご確認ください</a>
+      </p> -->
+    </div>
+    </div>
+
+    <div class="payment-notes-box -rakutenpay" data-trigger="fadeIn">
+      <h3 class="c-heading-d"><span class="txt">楽天ペイ決済の注意事項</span></h3>
+      <div class="body">
+      <ul class="noteslist">
+        <li class="notes">
+          <p class="txt">本キャンペーンは楽天ペイアプリによるコード・QR払いでのお支払いを対象としています。<br>下記のお支払い分は対象外となります。</p>
+          <ul class="notechild">
+            <li class="note">楽天ペイ（請求書払い）によるお支払い分。</li>
+            <li class="note">楽天ペイアプリ内の楽天ポイントカードによるお支払い分。</li>
+            <li class="note">楽天ペイアプリ内の楽天Edyへのチャージ分、楽天Edyによるお支払い分。</li>
+            <li class="note">楽天ペイアプリ内の楽天カードタッチ決済によるお支払い分。</li>
+            <li class="note">楽天ペイアプリ内のSuicaへのチャージ分、Suicaによるお支払い分。</li>
+            <li class="note">ネットでの楽天ペイのお支払い分。</li>
+          </ul>
+        </li>
+        <li class="notes">
+          <p class="txt">楽天ポイントカードおよび楽天ポイントカードアプリによるポイント利用は、本キャンペーンの対象外です。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">進呈ポイント数は、1回の決済ごとに小数点第1位以下を切り捨てし算出されます。</p>
+        </li>
+        <li class="notes">
+          <p class="txt">楽天ペイアプリでのお支払いをキャンセルされた場合、キャンセル分の金額はキャンペーン対象外となります。</p>
+        </li>
+      </ul>
+      <div class="attention">
+        <p class="txt">進呈するポイントには上限や条件がございます。詳しくは楽天ペイホームページのキャンペーン詳細をご確認ください。</p>
+      </div>
+      </div>
+    </div>
+
+  </div>
   </section>
 
-  <section class="l-callcenter -last">
+  <section class="l-callcenter" id="callcenter">
     <div class="l-page-contents">
       @include("/shared/inc/inc-callcenter.html", {"type": "first"})
     </div>
@@ -166,13 +344,152 @@
 
   <section class="l-consultation" id="consultation">
     <div class="l-page-contents">
-      <!-- TODO: 須坂市用相談会画像に差し替え必要 (title-consultation.png, title-consultation2.png, mochimono.png, schedule01.png, schedule02.png) -->
-      <h2 class="consultation-title" data-trigger="fadeIn"><img src="/images/title-consultation.png" alt="須坂市のみなさまへ"></h2>
+      <h2 class="consultation-title" data-trigger="fadeIn"><img src="/images/title-store.png" alt="大東市のみなさまへ"></h2>
       <div class="consultation-box">
-        <h3 class="title" data-trigger="fadeIn"><img src="/images/title-consultation2.png" alt="キャッシュレス決済 利用者向けスマホ使い方相談会（相談無料・予約不要） "></h3>
-        <p class="consultation-mochimono" data-trigger="fadeIn"><img src="/images/mochimono.png" alt="持ち物：スマートフォン"></p>
-        <div class="consultation-schedule" ><img src="/images/schedule01.png" alt=""></div>
-        <div class="consultation-schedule" data-trigger="fadeIn"><img src="/images/schedule02.png" alt=""></div>
+        <h3 class="title" data-trigger="fadeIn"><img src="/images/title-consultation_any.png" alt="キャッシュレス決済 事業者・市民向け個別相談会（相談無料・予約不要） ご自身のスマートフォンを持参してください"></h3>
+        <h4 class="c-card-heading -businesstrip">出張説明会</h4>
+        <div class="consultation-businesstrip"><img src="/images/businesstrip.png" alt=""></div>
+        <p class="c-text-b -str -fmdl -center" data-trigger="fadeIn">下記日程で市内店舗の方・市民の方を対象としたキャッシュレス決済の個別説明会を開催いたします。</p>
+        <h4 class="c-card-heading">市民向け</h4>
+        <div class="c-card-columns">
+          <div class="card" data-trigger="fadeIn">
+            <div class="img"><img src="/images/consultation_any-booth.png" alt="大東市役所正面玄関前特設ブースでもキャッシュレスのご相談受け付けます！ 受付期間：6月23日（月）〜7月11日（金） 受付時間：平日のみ9:00〜16:00"></div>
+            <ul class="indent">
+              <li>●受付は先着順とさせていただきます。</li>
+                <li>●お越しいただいた方から順に、個別にご説明させていただきますので、開催時間内でご都合の良い時間に、直接会場にお越しください。</li>
+            </ul>
+          </div>
+        </div>
+        <h4 class="c-card-heading -business">事業者向け</h4>
+        <div class="c-card-columns">
+          <div class="card -finish" data-trigger="fadeIn">
+            <div class="img"><img src="/images/consultation_any-img01_b.png" alt="事業者向け 日時：5/12,13 10:00〜16:00 会場：大東市立市民会館（204会議室）"></div>
+            <div class="textarea">
+              <dl class="date">
+                <dt class="label">日時</dt>
+                <dd class="txt">5月12日（月）・13日（火）10:00〜16:00</dd>
+              </dl>
+              <dl class="location">
+                <dt class="label">場所</dt>
+                <dd class="txt">大東市立市民会館（204会議室）</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="card -finish" data-trigger="fadeIn">
+            <div class="img"><img src="/images/consultation_any-img02_b.png" alt="事業者向け 日時：5/19,20 10:00〜16:00 会場：大東市立市民会館（204会議室）"></div>
+            <div class="textarea">
+              <dl class="date">
+                <dt class="label">日時</dt>
+                <dd class="txt">5月19日（月）・20日（火）10:00〜16:00</dd>
+              </dl>
+              <dl class="location">
+                <dt class="label">場所</dt>
+                <dd class="txt">大東市立市民会館（204会議室）</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="card -finish" data-trigger="fadeIn">
+            <div class="img"><img src="/images/consultation_any-img01.png" alt="市民向け 日時：6/16,18,19,20 10:00〜16:00 会場：大東市役所南別館 1階"></div>
+            <div class="textarea">
+              <dl class="date">
+                <dt class="label">日時</dt>
+                <dd class="txt">6月16日（月）・18日（水）・19日（木）・20日（金）10:00〜16:00</dd>
+              </dl>
+              <dl class="location">
+                <dt class="label">場所</dt>
+                <dd class="txt">大東市役所南別館 1階</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="store-box" id="consider">
+        <h3 class="title" data-trigger="fadeIn"><img src="/images/title-store-goyoi.png" alt="大東市内の店舗様へ"></h3>
+        <div class="store-subBox" data-trigger="fadeIn">
+          <h4 class="title"><img src="/images/store-consultation-title.png" alt="事業者向け相談会"></h4>
+          <p class="c-text-b -center -str">下記の日程で市内店舗の方を対象としたキャッシュレス決済の相談会を開催いたします。</p>
+          <ul class="labels">
+            <li class="-reverse">申込不要</li>
+            <li>個別相談形式</li>
+          </ul>
+          <div class="main -finish">
+            <img src="/images/store-consultation.png" alt="日時：5/12,13,19,20 各日10:00〜16:00 会場：大東市立市民会館204会議室 住所：大阪府大東市曙町4-6 駐車場あり（無料） 参加方法：申し込みは不要です。実施時間内に会場までおいでください。 持ち物：スマートフォン" class="_view-md-high">
+            <img src="/images/store-consultation_sp.png" alt="日時：5/12,13,19,20 各日10:00〜16:00 会場：大東市立市民会館204会議室 住所：大阪府大東市曙町4-6 駐車場あり（無料） 参加方法：申し込みは不要です。実施時間内に会場までおいでください。 持ち物：スマートフォン" class="_view-md-low">
+          </div>
+        </div>
+        <div class="store-contents">
+          <h3 class="request" data-trigger="fadeIn"><img src="/images/new-request.svg" alt="新規加盟のお申込み時にご用意いただく情報・書類（事例）" class="_view-md-high"><img src="/images/new-request_sp.svg" alt="新規加盟のお申込み時にご用意いただく情報・書類（事例）" class="_view-md-low"></h3>
+          <p class="c-text-b -str -center" data-trigger="fadeIn">以下の書類が必要ですので、お申込み時にご準備いただきますようお願いいたします。<br>※詳しくは各社のHPでご確認ください。</p>
+          <div class="provision" data-trigger="fadeIn">
+            <h4 class="c-heading-c">法人さま / 個人事業主さま共通</h4>
+            <div class="content">
+              <ol class="list">
+                <li class="item">① 店舗外観/店舗内観の写真を1枚（店舗名、取扱商品がわかるもの）</li>
+                <li class="item">② メールアドレス</li>
+                <li class="item">③ 契約者と同一名義の口座情報</li>
+              </ol>
+            </div>
+          </div>
+          <div class="plus" data-trigger="fadeIn"></div>
+          <div class="provision02">
+            <div class="content -business" data-trigger="fadeIn">
+              <div class="cover">
+                <h5 class="c-heading-c">法人さま</h5>
+                <div class="body">
+                  <div class="itemlist">
+                    <p class="item">
+                      <span class="txt -sm">・法人番号（法人マイナンバー）</span>
+                      <span class="txt -sm">・履歴事項全部証明書（登記簿謄本）</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image" data-trigger="fadeIn"><img src="/images/provision-item.png" alt="書類イメージ画像"></div>
+            <div class="content -kojin" data-trigger="fadeIn">
+              <div class="cover">
+                <h5 class="c-heading-c">個人事業主さま</h5>
+                <div class="body">
+                  <div class="itemlist">
+                    <p class="text">次のいずれかの代表者さまの本人確認書類を<br class="_view-lg-high">お願いします。</p>
+                    <p class="item">
+                      <span class="txt">・運転免許証</span>
+                      <span class="sml">（国際免許証は除きます。<br>表面の記載内容に変更がある場合は、裏面も必要です）</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・運転経歴証明書</span>
+                      <span class="sml">（顔写真があるもの）</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・パスポート</span>
+                      <span class="sml">（顔写真があるページ）</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・健康保険被保険者証</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・国民健康保険被保険者証</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・在留カード</span>
+                      <span class="sml">（顔写真があるもの）</span>
+                    </p>
+                    <p class="item">
+                      <span class="txt">・特別永住者証明書</span>
+                      <span class="sml">（顔写真があるもの）</span>
+                    </p>
+                  </div>
+                  <div class="restaurantItem">
+                    <span class="plus">＋</span>
+                    <span class="label">飲食店さま</span>
+                    <p class="txt">営業許可証</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
