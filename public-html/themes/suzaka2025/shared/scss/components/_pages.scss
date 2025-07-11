@@ -178,7 +178,7 @@
       @include fontSize(14);
       width: 100%;
     }
-    .aupay,.dbarai,.paypay,.rakutenpay, .rakutenedy{
+    .aupay,.dbarai,.paypay,.rakutenpay, .rakutenedy, .ieonpay{
       @include flexbox(space-between,nowrap);
       align-items: flex-start;
       gap: .5em;
@@ -229,6 +229,9 @@
     }
     .rakutenedy{
       .label{ background-color: $rakutenedy; }
+    }
+    .ieonpay{
+      .label{ background-color: $ieonpay; }
     }
   }
   .notes {
